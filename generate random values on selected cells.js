@@ -1,7 +1,7 @@
-// 数値をカンマで区切る
+// 選択されたセル上にランダムな数字を生成する
 
 const sheet = App.getActiveSheet();
 
 sheet.getActiveRange().forEach(function(cell, value, row, column){
-  cell.setValue(value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,'));
+  cell.setValue(Math.random());
 });
